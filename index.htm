@@ -18,6 +18,9 @@
 				var hour    = now.getHours();
 				var minute  = now.getMinutes();
 				var day = now.getDay();
+				var date = now.getDate();
+				var month = now.getMonth();
+				month = month+1;
 				var L = ["mon.", "tues.", "wed.", "thurs.", "fri.", "sat.","sun."];
 				if(hour < 10) {
 					hour = "0" + hour;
@@ -31,7 +34,7 @@
 				if (minute < 10) {
 					minute = "0" + minute;
 				};
-				document.getElementById("time_box").innerHTML = hour + "'" + minute;
+				document.getElementById("time_box").innerHTML = month + "/" + date;
 				document.getElementById("day_box").innerHTML = L[day];
 			});	
 		 </script>
